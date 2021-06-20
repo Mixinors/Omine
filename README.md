@@ -1,6 +1,6 @@
-# No Tubbo
+# Countdown
 
-This mod automatically kicks Tubbo after three hours of daily playtime.
+This mod adds the big countdown to the SMPHardcore world.
 
 # Installing
 

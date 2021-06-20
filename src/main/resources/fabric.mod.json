@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "id": "notubbo",
+  "id": "countdown",
   "version": "${version}",
-  "name": "No Tubbo",
-  "description": "Automatically kick Tubbo after three hours of daily playtime.",
+  "name": "Countdown",
+  "description": "Adds the big countdown to the SMPHardcore world.",
   "authors": [
     "vini2003"
   ],
@@ -11,11 +11,11 @@
     "email": "contact@vini2003.dev"
   },
   "license": "MIT",
-  "icon": "assets/notubbo/icon.png",
+  "icon": "assets/countdown/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
-      "dev.vini2003.notubbo.NT"
+      "dev.vini2003.countdown.CD"
     ]
   },
   "depends": {
