@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "id": "blade",
+  "id": "notubbo",
   "version": "${version}",
-  "name": "Blade",
-  "description": "A lightweight and simple GUI library.",
+  "name": "No Tubbo",
+  "description": "Automatically kick Tubbo after three hours of daily playtime.",
   "authors": [
     "vini2003"
   ],
@@ -11,17 +11,13 @@
     "email": "contact@vini2003.dev"
   },
   "license": "MIT",
-  "icon": "assets/blade/icon.png",
+  "icon": "assets/notubbo/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
-      "dev.vini2003.blade.BL"
-    ],
-    "client": [
-      "dev.vini2003.blade.BLClient"
+      "dev.vini2003.notubbo.NT"
     ]
   },
-  "accessWidener": "blade.accesswidener",
   "depends": {
     "fabricloader": ">=0.11.6",
     "fabric": ">=0.35.1+1.17",

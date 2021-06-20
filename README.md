@@ -1,3 +1,7 @@
-# A thing.
+# No Tubbo
 
-It does the thing, and the other thing - however, most importantly, it does the other thing fairly thingy.
+This mod automatically kicks Tubbo after three hours of daily playtime.
+
+# Installing
+
+- Install Fabric from [their website](http://fabricmc.net/).
