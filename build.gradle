@@ -11,6 +11,33 @@ archivesBaseName = project.mod_name
 group = project.mod_group
 version = project.mod_version + "+" + project.minecraft_version
 
+repositories {
+    maven {
+        name = "vini2003.dev"
+        url = "https://maven.pkg.github.com/vini2003/Maven"
+
+        credentials {
+            username = System.getenv("GPR_USERNAME")
+            password = System.getenv("GPR_TOKEN")
+        }
+    }
+
+    maven {
+        name = "JitPack"
+        url = "https://jitpack.io"
+    }
+
+    maven {
+        name = "Ladysnake Mods"
+        url = "https://ladysnake.jfrog.io/artifactory/mods"
+
+        content {
+            includeGroup "io.github.ladysnake"
+            includeGroupByRegex "io\\.github\\.onyxstudios.*"
+        }
+    }
+}
+
 dependencies {
     // Minecraft
     minecraft "com.mojang:minecraft:${project.minecraft_version}"
@@ -23,6 +50,13 @@ dependencies {
 
     // Fabric API
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
+
+    // Blade
+    modImplementation "dev.vini2003:blade:${project.blade_version}"
+    include "dev.vini2003:blade:${project.blade_version}"
+
+    // Identity
+    modImplementation "draylar:identity:${project.identity_version}"
 
     // Kotlin
     modImplementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${project.kotlin_version}"
@@ -59,8 +93,8 @@ jar {
 publishing {
     repositories {
         maven {
-            name = "GitHubPackages"
-            url = "https://maven.pkg.github.com/vini2003/No-Tubbo"
+            name = "vini2003.dev"
+            url = "https://maven.pkg.github.com/vini2003/Maven"
 
             credentials {
                 username = System.getenv("GPR_USERNAME")
