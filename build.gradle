@@ -11,6 +11,10 @@ archivesBaseName = project.mod_name
 group = project.mod_group
 version = project.mod_version + "+" + project.minecraft_version
 
+minecraft {
+    accessWidener = file("src/main/resources/bodyshufflelite.accesswidener")
+}
+
 repositories {
     maven {
         name = "vini2003.dev"

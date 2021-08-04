@@ -1,5 +1,6 @@
 package dev.vini2003.bodyshufflelite.registry.client
 
+import dev.vini2003.bodyshufflelite.client.screen.BodyPartScreen
 import dev.vini2003.bodyshufflelite.registry.common.BSLNetworks
 import io.netty.buffer.Unpooled
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents
@@ -13,8 +14,8 @@ import net.minecraft.network.PacketByteBuf
 import org.lwjgl.glfw.GLFW
 
 object BSLKeybinds {
-	val BodyPartSelector = keybinding("part_selector", GLFW.GLFW_KEY_V) {
-		ClientPlayNetworking.send(BSLNetworks.PartSelector, PacketByteBufs.empty())
+	val BodyPartSelector = keybinding("part_selector", GLFW.GLFW_KEY_V) { client ->
+		client.openScreen(BodyPartScreen())
 	}
 	
 	fun init() {

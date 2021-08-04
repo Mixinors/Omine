@@ -15,12 +15,36 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "dev.vini2003.countdown.CD"
+      {
+        "adapter": "kotlin",
+        "value": "dev.vini2003.bodyshufflelite.BSL"
+      }
+    ],
+    "client": [
+      {
+        "adapter": "kotlin",
+        "value": "dev.vini2003.bodyshufflelite.BSLClient"
+      }
+    ],
+    "cardinal-components": [
+      {
+        "adapter": "kotlin",
+        "value": "dev.vini2003.bodyshufflelite.registry.common.BSLComponents"
+      }
     ]
   },
+  "accessWidener": "bodyshufflelite.accesswidener",
+  "mixins": [
+    "bodyshufflelite.mixins.json"
+  ],
   "depends": {
     "fabricloader": ">=0.11.6",
     "fabric": ">=0.35.1+1.17",
     "minecraft": "1.17"
+  },
+  "custom": {
+    "cardinal-components": [
+      "bodyshufflelite:body_parts"
+    ]
   }
 }
