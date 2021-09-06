@@ -7,7 +7,9 @@ object SSCallbacks {
 	fun init() {
 		ServerTickEvents.END_SERVER_TICK.register { server ->
 			server.playerManager.playerList.forEach { player ->
-				SSComponents.Skin.sync(player)
+				if (player.age % 100 == 0) {
+					SSComponents.Skin.sync(player)
+				}
 			}
 		}
 	}

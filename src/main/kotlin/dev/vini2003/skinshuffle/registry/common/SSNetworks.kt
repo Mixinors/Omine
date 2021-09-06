@@ -5,21 +5,13 @@ import net.fabricmc.fabric.api.networking.v1.PacketByteBufs
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking
 
 object SSNetworks {
-	val TriggerSkinUpdate = SS.id("trigger_skin_update")
-	val SkinUpdate = SS.id("skin_update")
+	val SkinUpdate = SS.id("trigger_skin_update")
 	
 	fun init() {
-		ServerPlayNetworking.registerGlobalReceiver(TriggerSkinUpdate) { server, player, _, buf, _ ->
-			val uuid = player.uuid
+		ServerPlayNetworking.registerGlobalReceiver(SkinUpdate) { server, player, _, buf, _ ->
 			val target = buf.readString()
 			
-			server.playerManager.playerList.forEach {
-				val buf = PacketByteBufs.create()
-				buf.writeUuid(uuid)
-				buf.writeString(target)
-				
-				ServerPlayNetworking.send(it, SkinUpdate, buf)
-				
+			server.playerManager.playerList.forEach { _ ->
 				SSComponents.Skin.get(player).target = target
 				SSComponents.Skin.sync(player)
 			}
