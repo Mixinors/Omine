@@ -12,7 +12,7 @@ group = project.mod_group
 version = project.mod_version + "+" + project.minecraft_version
 
 minecraft {
-    accessWidener = file("src/main/resources/bodyshufflelite.accesswidener")
+    accessWidener = file("src/main/resources/skinshuffle.accesswidener")
 }
 
 repositories {
@@ -34,11 +34,6 @@ repositories {
     maven {
         name = "Ladysnake Mods"
         url = "https://ladysnake.jfrog.io/artifactory/mods"
-
-        content {
-            includeGroup "io.github.ladysnake"
-            includeGroupByRegex "io\\.github\\.onyxstudios.*"
-        }
     }
 }
 
@@ -55,19 +50,15 @@ dependencies {
     // Fabric API
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
 
-    // Blade
-    modImplementation "dev.vini2003:blade:${project.blade_version}"
-    include "dev.vini2003:blade:${project.blade_version}"
+    // Cardinal Components API
+    modImplementation "io.github.onyxstudios.Cardinal-Components-API:cardinal-components-base:${project.cardinal_components_api_version}"
+    include "io.github.onyxstudios.Cardinal-Components-API:cardinal-components-base:${project.cardinal_components_api_version}"
 
-    // Identity
-    modImplementation "draylar:identity:${project.identity_version}"
+    modImplementation "io.github.onyxstudios.Cardinal-Components-API:cardinal-components-entity:${project.cardinal_components_api_version}"
+    include "io.github.onyxstudios.Cardinal-Components-API:cardinal-components-entity:${project.cardinal_components_api_version}"
 
     // Kotlin
-    modImplementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${project.kotlin_version}"
-
-    // Joda Time
-    implementation "joda-time:joda-time:${project.joda_time_version}"
-    include "joda-time:joda-time:${project.joda_time_version}"
+    modImplementation "net.fabricmc:fabric-language-kotlin:${project.fabric_language_kotlin_version}"
 }
 
 processResources {
