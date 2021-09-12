@@ -1,7 +1,7 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "dev.vini2003.skinshuffle.mixin.client",
+  "package": "dev.vini2003.template.mixin.client",
   "mixins": [
   ],
   "client": [

@@ -1,4 +1,0 @@
-accessWidener v1 named
-
-accessible field net/minecraft/client/network/PlayerListEntry textures Ljava/util/Map;
-accessible field net/minecraft/client/network/PlayerListEntry model Ljava/lang/String;
