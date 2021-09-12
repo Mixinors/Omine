@@ -1,8 +1,8 @@
-package dev.vini2003.template
+package dev.vini2003.omine
 
 import net.fabricmc.api.ClientModInitializer
 
-object TClient : ClientModInitializer {
+object OmineClient : ClientModInitializer {
 	override fun onInitializeClient() {
 	
 	}

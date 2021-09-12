@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "$id",
+  "id": "omine",
   "version": "$version",
   "name": "$name",
   "description": "$description",
@@ -17,23 +17,13 @@
     "main": [
       {
         "adapter": "kotlin",
-        "value": "dev.vini2003.template.SS"
+        "value": "dev.vini2003.omine.Omine"
       }
     ],
     "client": [
       {
         "adapter": "kotlin",
-        "value": "dev.vini2003.template.SSClient"
-      }
-    ],
-    "cardinal-components": [
-      {
-        "adapter": "kotlin",
-        "value": "dev.vini2003.template.registry.common.TComponents"
-      },
-      {
-        "adapter": "kotlin",
-        "value": "dev.vini2003.template.registry.client.TComponents"
+        "value": "dev.vini2003.omine.OmineClient"
       }
     ]
   },
@@ -42,13 +32,12 @@
     "mod.mixins.json"
   ],
   "depends": {
-    "fabric-langauge-kotlin": ">=$kotlinVersion",
-    "fabricloader": ">=$fabricLoaderVersion",
-    "fabric": ">=$fabricApiVersion",
-    "minecraft": ">=$minecraftVersion"
+    "fabric-language-kotlin": ">=1.6.3+kotlin.1.5.21",
+    "fabricloader": ">=0.11.6",
+    "fabric": ">=0.39.2+1.17",
+    "minecraft": ">=1.17.1"
   },
   "custom": {
-    "cardinal-components": [
-    ]
+
   }
 }
