@@ -25,18 +25,6 @@ repositories {
     // Maven Central
     mavenCentral()
 
-    // vini2003.dev
-    maven {
-        name = "vini2003.dev"
-
-        setUrl("https://maven.pkg.github.com/vini2003/Maven")
-
-        credentials {
-			username = System.getenv("GPR_USERNAME")
-			password = System.getenv("GPR_TOKEN")
-        }
-    }
-
     // Fabric
     maven("https://maven.fabricmc.net/")
 
@@ -269,21 +257,6 @@ publishing {
     
 		    artifact(sourcesJar)
 		    artifact(javadocJar)
-        }
-    }
-
-    repositories {
-        repositories {
-		    maven {
-		        name = "GitHubPackages"
-    
-		        setUrl("https://maven.pkg.github.com/vini2003/Maven")
-    
-		        credentials {
-		            username = System.getenv("GPR_USERNAME")
-		            password = System.getenv("GPR_TOKEN")
-		        }
-		    }
         }
     }
 }
