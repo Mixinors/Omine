@@ -1,7 +1,3 @@
-# Countdown
+# Template
 
-This mod adds the big countdown to the SMPHardcore world.
-
-# Installing
-
-- Install Fabric from [their website](http://fabricmc.net/).
+This is a template mod for Fabric with Kotlin.
