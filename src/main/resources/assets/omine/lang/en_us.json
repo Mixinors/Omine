@@ -1,0 +1,7 @@
+{
+  "text.omine.paused": "Gas effects and propagation are §aenabled§r.",
+  "text.omine.resumed": "Gas effects and propagation are §cdisabled§r.",
+  "text.omine.speed": "Gas speed changed from §a%s§r to §a%s§r.",
+  "text.omine.start": "Gas effects and propagation §astarted§a.",
+  "text.omine.refresh": "Gas refreshed."
+}

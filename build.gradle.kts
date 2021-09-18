@@ -33,6 +33,9 @@ repositories {
 
     // Ladysnake Mods
     maven("https://ladysnake.jfrog.io/artifactory/mods")
+
+	// shedaniel
+	maven("https://maven.shedaniel.me/")
 }
 
 dependencies {
@@ -189,6 +192,17 @@ dependencies {
 		version = "3.1.1"
     )
 
+	modImplementation(
+		group = "me.shedaniel.cloth.api",
+		name = "cloth-api",
+		version = "2.0.54"
+	)
+
+	include(
+		group = "me.shedaniel.cloth.api",
+		name = "cloth-api",
+		version = "2.0.54"
+	)
 
     // KotlinX Serialization Json
     implementation(

@@ -11,7 +11,7 @@
     "email": "contact@vini2003.dev"
   },
   "license": "MIT",
-  "icon": "assets/template/icon.png",
+  "icon": "assets/omine/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
@@ -24,6 +24,12 @@
       {
         "adapter": "kotlin",
         "value": "dev.vini2003.omine.OmineClient"
+      }
+    ],
+    "cardinal-components": [
+      {
+        "adapter": "kotlin",
+        "value": "dev.vini2003.omine.registry.common.HarmfulGasComponents"
       }
     ]
   },
