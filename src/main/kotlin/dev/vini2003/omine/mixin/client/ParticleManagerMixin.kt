@@ -33,11 +33,12 @@ class ParticleManagerMixin {
         }
     }
 
-    companion object {
+    private companion object {
         @Final
         @Shadow
         @Mutable
         private var PARTICLE_TEXTURE_SHEETS: MutableList<ParticleTextureSheet>? = null
+
         @Redirect(
             at = At(
                 value = "INVOKE",

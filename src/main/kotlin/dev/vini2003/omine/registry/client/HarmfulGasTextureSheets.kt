@@ -22,7 +22,7 @@ object HarmfulGasTextureSheets {
                 GlStateManager.SrcFactor.ONE,
                 GlStateManager.DstFactor.ZERO
             )
-//            RenderSystem.alphaFunc(516, 0.003921569f)
+            //RenderSystem.alphaFunc(516, 0.003921569f)
             bufferBuilder.begin(VertexFormat.DrawMode.QUADS, VertexFormats.POSITION_TEXTURE_COLOR_LIGHT)
         }
 

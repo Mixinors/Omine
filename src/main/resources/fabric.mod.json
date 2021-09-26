@@ -44,6 +44,8 @@
     "minecraft": ">=1.17.1"
   },
   "custom": {
-
+    "cardinal-components": [
+      "omine:world_gas_component"
+    ]
   }
 }

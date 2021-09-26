@@ -23,7 +23,7 @@ object HarmfulGasCommands {
         gasComponent!!.add((world as ServerWorld).spawnPos)
         gasComponent.originPos = world.spawnPos
         gasComponent.getCooldowns()[player.uuid] = 300
-        context.source.sendFeedback(TranslatableText("text.harmfulgas.start"), true)
+        context.source.sendFeedback(TranslatableText("text.omine.start"), true)
         return 1
     }
 
@@ -32,7 +32,7 @@ object HarmfulGasCommands {
         val world: World = context.source.world
         val gasComponent = WorldGasComponent[world]
         gasComponent!!.isPaused = true
-        context.source.sendFeedback(TranslatableText("text.harmfulgas.paused"), true)
+        context.source.sendFeedback(TranslatableText("text.omine.paused"), true)
         return 1
     }
 
@@ -41,7 +41,7 @@ object HarmfulGasCommands {
         val world: World = context.source.world
         val gasComponent = WorldGasComponent[world]
         gasComponent!!.isPaused = false
-        context.source.sendFeedback(TranslatableText("text.harmfulgas.resumed"), true)
+        context.source.sendFeedback(TranslatableText("text.omine.resumed"), true)
         return 1
     }
 
@@ -50,7 +50,7 @@ object HarmfulGasCommands {
         val world: World = context.source.world
         val gasComponent = WorldGasComponent[world]
         val speed = IntegerArgumentType.getInteger(context, "speed")
-        context.source.sendFeedback(TranslatableText("text.harmfulgas.speed", gasComponent!!.speed, speed), true)
+        context.source.sendFeedback(TranslatableText("text.omine.speed", gasComponent!!.speed, speed), true)
         gasComponent.speed = speed
         return 1
     }
@@ -63,13 +63,13 @@ object HarmfulGasCommands {
         sendRefreshGasCloudPacket(player)
         gasComponent!!.getParticles().remove(player.uuid)
         gasComponent.getCooldowns()[player.uuid] = 150
-        context.source.sendFeedback(TranslatableText("text.harmfulgas.refresh"), true)
+        context.source.sendFeedback(TranslatableText("text.omine.refresh"), true)
         return 1
     }
 
     fun initialize() {
         CommandRegistrationCallback.EVENT.register(CommandRegistrationCallback { dispatcher: CommandDispatcher<ServerCommandSource>, dedicated: Boolean ->
-            val harmfulGasRoot = CommandManager.literal("harmfulgas").build()
+            val harmfulGasRoot = CommandManager.literal("omine").build()
             val harmfulGasPlace = CommandManager.literal("start")
                 .requires { source: ServerCommandSource ->
                     source.hasPermissionLevel(
